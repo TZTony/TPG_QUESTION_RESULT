@@ -11,10 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Question 1, it is used for validate a list of IP address loaded from a file "iplist.text" under the class root path, 
+ * Question 1, it is used for validating a list of IP address loaded from a file "iplist.text" under the class root path, 
  * run main class to print all valid IP address in console 
  * @author Tony Tian
- *
  */
 public class IPValidationRegex {
 	private static final String VALID_IP_ADDRESS_PATTERN = "(((2[0-4]\\d)|(25[0-5])|(1\\d\\d)|(0?\\d\\d)|(0?0?\\d))\\.){3}((2[0-4]\\d)|(25[0-5])|(1\\d\\d)|(0?\\d\\d)|(0?0?\\d))";

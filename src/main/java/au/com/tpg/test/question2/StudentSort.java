@@ -6,8 +6,7 @@ import java.util.List;
 
 /**
  * Main class is used for sort Student List, run main method to print out the result in console
- * @author Tony
- *
+ * @author Tony Tian
  */
 public class StudentSort {
 	/**

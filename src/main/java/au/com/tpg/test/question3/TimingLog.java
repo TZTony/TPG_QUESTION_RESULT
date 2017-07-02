@@ -3,7 +3,6 @@ package au.com.tpg.test.question3;
 /**
  * the object used for recording the running time of the method
  * @author Tony Tian
- *
  */
 public class TimingLog {
 	private long startTime = 0l;

@@ -3,19 +3,18 @@ package au.com.tpg.test.question3;
 import net.sf.cglib.proxy.Enhancer;
 
 /**
- * Factory for creating a Proxy instance
+ * Factory for creating a proxy instance
  * @author Tony Tian
  */
 public class TimingFactory {
-	private static final TimingMethodInterceptor TIMING_METHOD_INTERCEPTOR = new TimingMethodInterceptor();
 	public TimingFactory() {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static <T> T getProxyInstance(Class<T> t) {
+	public static <T> T getProxyInstance(Class<T> t, MethodWrapper methodWrapper) {
 		Enhancer en = new Enhancer();
 		en.setSuperclass(t);
-		en.setCallback(TIMING_METHOD_INTERCEPTOR);
+		en.setCallback(new TimingMethodInterceptor(methodWrapper));
 		return (T)en.create();
 	}
 

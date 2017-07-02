@@ -18,10 +18,13 @@ public class MethodRunningTimeTest{
 	}
 	
 	public static void methodRunningTimeTest() {
-		System.out.println("[MethodRunningTimeTest] Running Test 1");
+		System.out.println("[MethodRunningTimeTest] Running Test");
+		
+		//create a timingMethodWrapper or using other MethodWrapper implementation
+		MethodWrapper timingMethodWrapper = new TimingLogWrapper();
 		
 		//using IPValidationRegex in question as example
-		IPValidationRegex ipValidator = TimingFactory.getProxyInstance(IPValidationRegex.class);
+		IPValidationRegex ipValidator = TimingFactory.getProxyInstance(IPValidationRegex.class, timingMethodWrapper);
 		try {
 			List<String> validIpList = ipValidator.filterIpAddress("iplist.txt");
 			if (validIpList.size()> 0) {

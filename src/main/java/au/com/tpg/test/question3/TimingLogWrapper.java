@@ -4,9 +4,9 @@ package au.com.tpg.test.question3;
  * the object used for recording the running time of the method
  * @author Tony Tian
  */
-public class TimingLog {
+public class TimingLogWrapper implements MethodWrapper{
 	private long startTime = 0l;
-	public TimingLog() {
+	public TimingLogWrapper() {
 	}
 	
 	public void beforeRun(String functionName) {

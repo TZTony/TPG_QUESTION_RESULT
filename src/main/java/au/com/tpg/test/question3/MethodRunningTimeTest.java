@@ -29,11 +29,9 @@ public class MethodRunningTimeTest{
 			} else {
 				System.out.println("No valid IP address");
 			}
-			
 		} catch (IOException | URISyntaxException e) {
 			System.out.println("Load iplist file exception");
 		}
-				
 	}
 	
 }

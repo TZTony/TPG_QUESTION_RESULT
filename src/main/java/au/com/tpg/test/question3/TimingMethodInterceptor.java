@@ -10,7 +10,6 @@ import net.sf.cglib.proxy.MethodProxy;
  * @author Tony Tian
  */
 public class TimingMethodInterceptor implements MethodInterceptor {
-	private TimingLog timingLog = new TimingLog();
 	public TimingMethodInterceptor() {
 	}
 
@@ -19,6 +18,7 @@ public class TimingMethodInterceptor implements MethodInterceptor {
 	 */
 	@Override
 	public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
+		TimingLog timingLog = new TimingLog();
 		timingLog.beforeRun(method.getName());
 		Object result = proxy.invokeSuper(obj, args);
 		timingLog.afterRun(method.getName());

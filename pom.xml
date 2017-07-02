@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>au.com.tpg.test</groupId>
+  <artifactId>result-tony</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>TPG_TEST_RESULT</name>
+  <developers>
+	<developer>
+		<id>tianzhe912@hotmail.co.uk</id>
+		<email>tianzhe912@hotmail.co.uk</email>
+		<name>Tony Tian</name>
+	</developer>
+  </developers>
+  <properties>
+	<jdk.version>1.8</jdk.version>
+	<cglib.version>3.2.5</cglib.version>
+  </properties>
+  <dependencies>
+  	<dependency>
+		<groupId>cglib</groupId>
+    	<artifactId>cglib</artifactId>
+		<version>${cglib.version}</version>
+  	</dependency>
+  </dependencies>
+</project>
